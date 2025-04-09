@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: entalk-questions-tool
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://Entalk:Pamyk3gara@cluster0.zo1ajcx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET
+        value: entalk_jwt_secret_key_production
+      - key: OPENAI_API_KEY
+        value: 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
+      - key: NODE_ENV
+        value: production
